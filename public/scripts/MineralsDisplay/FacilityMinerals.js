@@ -14,19 +14,25 @@ const fetchFacilityMinerals = async () => {
 const findFacility = async (facilityId) => {
 	const res = await fetch("http://localhost:3000/facilities");
 	const facilities = await res.json();
-	const name = facilities.find(({ id }) => id === facilityId).name;
-	console.log(name);
-	return name;
+	const facility = facilities.find(({ id }) => id === facilityId);
+	if (facility === undefined) {
+		return "";
+	}
+	return `for ${facility.name}`;
 };
 
 export const genFacilityHTML = async (facilityId) => {
 	const facilities = await fetchFacilityMinerals();
-	const filtered = facilities.filter((facility) => facility.facilityId === facilityId);
+	const filtered = facilities.filter(
+		(facility) => facility.facilityId === facilityId,
+	);
 	console.log(filtered);
 	const radios = filtered
-		.map((fac) => `<div><input type="radio"/>${fac.amount} tons of ${fac.mineral.name}</div>`)
+		.map(
+			(fac) =>
+				`<div><input type="radio" name="facility-minerals"/>${fac.amount} tons of ${fac.mineral.name}</div>`,
+		)
 		.join("");
 
-	return `<div><header>Facility Minerals for ${await findFacility(facilityId)}</header>${radios}</div>`;
+	return `<div><header>Facility Minerals ${await findFacility(facilityId)}</header>${radios}</div>`;
 };
-
