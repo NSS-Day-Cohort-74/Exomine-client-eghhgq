@@ -7,13 +7,13 @@ const app = document.querySelector("#app");
 const render = async () => {
 	createEventListeners();
 	app.innerHTML = `<div id="top">
-    <div id=select-menus>
-    <div class="selects">
-    ${await genFacilitiesSelectMenu()} 
-  </div>
+    <div id="select-menus">
     <div class="selects">
     ${await genGovernorSelectMenu()}
   </div>
+      <div class="selects">
+        ${await genFacilitiesSelectMenu()} 
+      </div>
   </div>
 
     <div id="colonyMinContainer">

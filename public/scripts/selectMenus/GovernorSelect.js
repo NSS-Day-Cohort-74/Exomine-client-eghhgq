@@ -18,13 +18,15 @@ export const genGovernorSelectMenu = () =>
                   <select name="governers">
                     <option value="default"> Choose a Governor... `;
 		for (const gov of govs) {
-			govhtml += `
+			if (gov.status === "active") {
+				govhtml += `
                 <option value="${gov.id}"
                     data-id="${gov.id}"
                     data-name="${gov.name}"
                     data-status="${gov.status}"
                     data-colony_id="${gov.colonyId}"> ${gov.name}
                     `;
+			}
 		}
 		govhtml += "</select>";
 		return govhtml;

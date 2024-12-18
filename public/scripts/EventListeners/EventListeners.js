@@ -17,11 +17,13 @@ const govHandler = async ({ target: { name, options } }) => {
 };
 const facilityHandler = async (event) => {
 	if (event.target.name === "facilities") {
-		console.log(
-			event.target.options[event.target.options.selectedIndex].dataset.name,
-		);
+		document.querySelector("#space-purchase").removeAttribute("disabled");
 		document.querySelector("#facility-minerals").innerHTML =
 			await genFacilityHTML(event.target.options.selectedIndex);
+		if (parseInt(event.target.options.selectedIndex) === 0) {
+			document
+				.querySelector("#space-purchase")
+				.setAttribute("disabled", "disabled");
+		}
 	}
 };
-
