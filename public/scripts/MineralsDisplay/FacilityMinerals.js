@@ -24,7 +24,7 @@ export const genFacilityHTML = async (facilityId) => {
 	const filtered = facilities.filter((facility) => facility.facilityId === facilityId);
 	console.log(filtered);
 	const radios = filtered
-		.map((fac) => `<input type="radio"/>${fac.amount} tons of ${fac.mineral.name}`)
+		.map((fac) => `<div><input type="radio"/>${fac.amount} tons of ${fac.mineral.name}</div>`)
 		.join("");
 
 	return `<div><header>Facility Minerals for ${await findFacility(facilityId)}</header>${radios}</div>`;
