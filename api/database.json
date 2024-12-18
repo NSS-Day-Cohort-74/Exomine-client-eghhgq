@@ -1,4 +1,116 @@
 {
-    "minerals":[],
-    "facilityMinerals": []
+  "minerals": [
+    {
+      "id": 1,
+      "name": "Translucent Quarts"
+    },
+    {
+      "id": 2,
+      "name": "Apophyllite crystals"
+    },
+    {
+      "id": 3,
+      "name": "Brookite dust"
+    },
+    {
+      "id": 4,
+      "name": "Isolated Fluorite"
+    },
+    {
+      "id": 5,
+      "name": "Prismatic Diamond"
+    }
+  ],
+  "facilityMinerals": [
+    {
+      "id": 1,
+      "mineralId": 1,
+      "facilityId": 1,
+      "amount": 17
+    },
+    {
+      "id": 2,
+      "mineralId": 2,
+      "facilityId": 1,
+      "amount": 17
+    },
+    {
+      "id": 3,
+      "mineralId": 1,
+      "facilityId": 2,
+      "amount": 17
+    }
+  ],
+  "colonies": [
+    {
+      "id": 1,
+      "name": "Earth"
+    },
+    {
+      "id": 2,
+      "name": "Mars"
+    }
+  ],
+  "colonyMinerals": [
+    {
+      "id": 1,
+      "amount": 14,
+      "colonyId": 1,
+      "mineralId": 2
+    },
+    {
+      "id": 1,
+      "amount": 10,
+      "colonyId": 1,
+      "mineralId": 1
+    }
+  ],
+  "facilities": [
+    {
+      "id": 1,
+      "status": "active",
+      "name": "Rock Bottom Resources"
+    },
+    {
+      "id": 2,
+      "status": "active",
+      "name": "Pickaxe & Chill Mining Co."
+    },
+    {
+      "id": 3,
+      "status": "active",
+      "name": "Shovelicious Excavations"
+    },
+    {
+      "id": 4,
+      "status": "inactive",
+      "name": "Mars Mining Co."
+    }
+  ],
+  "governors": [
+    {
+      "id": 1,
+      "name": "Patricia Purdy",
+      "status": "active",
+      "colonyId": 1
+    },
+    {
+      "id": 2,
+      "name": "Katrina Bahringer",
+      "status": "active",
+      "colonyId": 2
+    },
+    {
+      "id": 3,
+      "name": "Lola Wolf",
+      "status": "active",
+      "colonyId": 1
+    },
+    {
+      "id": 3,
+      "name": "Damon Hartman",
+      "status": "inactive",
+      "colonyId": 2
+    }
+  ]
 }
