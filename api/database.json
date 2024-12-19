@@ -26,13 +26,13 @@
       "id": 1,
       "mineralId": 1,
       "facilityId": 1,
-      "amount": 17
+      "amount": 14
     },
     {
       "id": 2,
       "mineralId": 2,
       "facilityId": 1,
-      "amount": 17
+      "amount": 12
     },
     {
       "id": 3,

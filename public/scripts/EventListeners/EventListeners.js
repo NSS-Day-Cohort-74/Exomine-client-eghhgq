@@ -1,29 +1,17 @@
-import { genColonyHTML } from "../MineralsDisplay/ColonyMinerals.js";
-import { genFacilityHTML } from "../MineralsDisplay/FacilityMinerals.js";
+import { govHandler } from "./Handlers/GovernorHandler.js";
+import { facilityHandler } from "./Handlers/FacilityHandler.js";
+import { mineralSelectionHandler } from "./Handlers/MineralSelectionHandler.js";
+import { SpacePurchaseHandler } from "./Handlers/SpaceCartButtonHandler.js";
 
 export const createEventListeners = () => {
 	document.addEventListener("change", govHandler);
 	document.addEventListener("change", facilityHandler);
+	document.addEventListener("change",mineralSelectionHandler)
+	document.addEventListener("click", SpacePurchaseHandler)
+	
 };
 
-const govHandler = async ({ target: { name, options } }) => {
-	if (name === "governers") {
-		console.log(options[options.selectedIndex].dataset.name);
 
-		document.querySelector("#colony-minerals").innerHTML = await genColonyHTML(
-			options[options.selectedIndex].dataset.colony_id,
-		);
-	}
-};
-const facilityHandler = async (event) => {
-	if (event.target.name === "facilities") {
-		document.querySelector("#space-purchase").removeAttribute("disabled");
-		document.querySelector("#facility-minerals").innerHTML =
-			await genFacilityHTML(event.target.options.selectedIndex);
-		if (parseInt(event.target.options.selectedIndex) === 0) {
-			document
-				.querySelector("#space-purchase")
-				.setAttribute("disabled", "disabled");
-		}
-	}
-};
+
+
+
