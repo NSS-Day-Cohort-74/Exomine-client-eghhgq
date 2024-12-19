@@ -2,6 +2,8 @@ import { purchaseMineral } from "../../TransientState.js";
 
 
 export const SpacePurchaseHandler = (event) => {
-    event.target.id === "space-purchase" && purchaseMineral()
+    if (event.target.id === "space-purchase") {
+        purchaseMineral()
+    }
 }
 

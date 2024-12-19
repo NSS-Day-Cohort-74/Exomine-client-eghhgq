@@ -20,8 +20,8 @@ export const genColonyHTML = async (colonyId) => {
 	const filtered = colonyMinerals.filter(
 		(obj) => obj.colonyId === parseInt(colonyId),
 	);
-	let colonyMineralsHtml = `<header>
-                                ${await findColony(colonyId)} Minerals</header>
+	let colonyMineralsHtml = `<h3>
+                                ${await findColony(colonyId)} Minerals</h3>
                                 <ul>`;
 	if (filtered.length === 0) {
 		return colonyMineralsHtml;

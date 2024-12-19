@@ -1,16 +1,23 @@
 import { genFacilityHTML } from "../../MineralsDisplay/FacilityMinerals.js";
 import { setFacility } from "../../TransientState.js";
 
-export const facilityHandler = async (event) => {
-	if (event.target.name === "facilities") {
-		document.querySelector("#space-purchase").removeAttribute("disabled");
+
+
+export const facilityHandler = async ({target: { options,name } }) => {
+	if (name === "facilities") {
 		document.querySelector("#facility-minerals").innerHTML =
-			await genFacilityHTML(event.target.options.selectedIndex);
-		if (parseInt(event.target.options.selectedIndex) === 0) {
+			await genFacilityHTML(options.selectedIndex);
+		if (parseInt(options.selectedIndex) === 0) {
+			document.querySelector("#space-purchase").setAttribute("disabled", "disabled");
+		} else if ( options[options.selectedIndex].dataset.status === "active") {
+			document.querySelector("#space-purchase").removeAttribute("disabled");
+		} else {
 			document
-				.querySelector("#space-purchase")
-				.setAttribute("disabled", "disabled");
+			.querySelector("#space-purchase")
+			.setAttribute("disabled", "disabled")
 		}
-    setFacility(event.target.options[event.target.options.selectedIndex].value)
+		
+    setFacility(options[options.selectedIndex].value)
     }
+	
 };

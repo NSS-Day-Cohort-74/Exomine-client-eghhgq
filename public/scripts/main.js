@@ -16,16 +16,16 @@ const render = async () => {
       </div>
   </div>
 
-    <div id="colonyMinContainer">
+    <div id="colonyMinContainer" class="container">
       <div id="colony-minerals">
-        <header>Colony Minerals</header> 
+        <h3>Colony Minerals</h3>
       </div>
     </div>
   </div>
   <div id="bottom">
-  <div id="FacilityMinContainer">
+  <div id="FacilityMinContainer" class="container">
     <div id="facility-minerals">
-      <header>Facility Minerals</header> 
+      <h3>Facility Minerals</h3>
     </div>
       </div>
     ${genSpaceCart()}

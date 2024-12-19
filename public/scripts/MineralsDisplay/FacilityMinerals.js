@@ -30,10 +30,11 @@ export const genFacilityHTML = async (facilityId) => {
 	const radios = filtered
 		.map(
 			(fac) =>
-				`<div><input type="radio" name="facility-minerals" data-name="${fac.mineral.name}" data-id="${fac.mineral.id}" />${fac.amount} tons of ${fac.mineral.name}</div>`,
+				`<div id="faMin"><input type="radio" name="facility-minerals" data-name="${fac.mineral.name}" data-id="${fac.mineral.id}"
+			 />${fac.amount} tons of ${fac.mineral.name}</div>`,
 		)
 		.join("");
 
-	return `<div><header>Facility Minerals ${await findFacility(facilityId)}</header>${radios}</div>`;
+	return `<div><h3>Facility Minerals ${await findFacility(facilityId)}</h3>${radios}</div>`;
 };
 

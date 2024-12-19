@@ -11,22 +11,3 @@ export const mineralSelectionHandler = (changeEvent) => {
 }
 	
 
-/*
-export const mineralSelectionHandler = ({
-	target:
-	{ 
-		name: idOfMin,
-		dataset: {
-			name,
-			id
-		},
-}}) => {
-	if (name === "facility-minerals") {
-		const insideHTML=document.querySelector("#whatToBuy")
-		const mineral = (name)
-		insideHTML.innerHTML=`1 ton of ${mineral} `
-		setMineral(idOfMin)
-
-	}
-}
-	*/
