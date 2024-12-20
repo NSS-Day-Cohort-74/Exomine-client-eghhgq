@@ -22,7 +22,7 @@ export const genColonyHTML = async (colonyId) => {
 	);
 	let colonyMineralsHtml = `<h3>
                                 ${await findColony(colonyId)} Minerals</h3>
-                                <ul>`;
+                              <ul>`;
 	if (filtered.length === 0) {
 		return colonyMineralsHtml;
 	}
@@ -32,4 +32,3 @@ export const genColonyHTML = async (colonyId) => {
 	colonyMineralsHtml += "</ul>";
 	return colonyMineralsHtml;
 };
-

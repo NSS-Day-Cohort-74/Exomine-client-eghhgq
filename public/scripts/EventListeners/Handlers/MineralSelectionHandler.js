@@ -1,4 +1,5 @@
 import { setMineral } from "../../TransientState.js"
+import { purchases } from "../../TransientState.js"
 
 export const mineralSelectionHandler = (changeEvent) => {
 	if(changeEvent.target.name ==="facility-minerals"){

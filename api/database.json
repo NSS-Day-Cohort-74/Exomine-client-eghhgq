@@ -32,37 +32,37 @@
       "id": 2,
       "mineralId": 2,
       "facilityId": 1,
-      "amount": 11
+      "amount": 10
     },
     {
       "id": 3,
-      "mineralId": 1,
+      "mineralId": 5,
       "facilityId": 2,
-      "amount": 13
+      "amount": 7
     },
     {
       "id": 4,
       "mineralId": 1,
       "facilityId": 2,
-      "amount": 10
+      "amount": 8
     },
     {
       "id": 5,
       "mineralId": 4,
       "facilityId": 3,
-      "amount": 11
+      "amount": 4
     },
     {
       "id": 6,
       "mineralId": 5,
       "facilityId": 3,
-      "amount": 14
+      "amount": 12
     },
     {
       "id": 7,
       "mineralId": 3,
       "facilityId": 2,
-      "amount": 14
+      "amount": 6
     }
   ],
   "colonies": [
@@ -109,6 +109,54 @@
       "colonyId": 3,
       "mineralId": 1,
       "id": 5
+    },
+    {
+      "amount": 1,
+      "colonyId": 1,
+      "mineralId": 3,
+      "id": 6
+    },
+    {
+      "amount": 1,
+      "colonyId": 2,
+      "mineralId": 5,
+      "id": 7
+    },
+    {
+      "amount": 1,
+      "colonyId": 3,
+      "mineralId": 2,
+      "id": 8
+    },
+    {
+      "amount": 1,
+      "colonyId": 3,
+      "mineralId": 3,
+      "id": 9
+    },
+    {
+      "amount": 1,
+      "colonyId": 1,
+      "mineralId": 5,
+      "id": 10
+    },
+    {
+      "amount": 4,
+      "colonyId": 1,
+      "mineralId": 4,
+      "id": 11
+    },
+    {
+      "amount": 1,
+      "colonyId": 3,
+      "mineralId": 4,
+      "id": 12
+    },
+    {
+      "amount": 1,
+      "colonyId": 2,
+      "mineralId": 4,
+      "id": 13
     }
   ],
   "facilities": [
