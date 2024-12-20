@@ -31,8 +31,15 @@ MineralsDisplay<--database: here ya go
 EventListeners<-- MineralsDisplay: sure
 
 EventListeners-->DOM: heres some html
+ 
 
 DOM->EventListeners: button has been click
 
 EventListeners->TransientState: button clicked
+
+EventListeners->MineralsDisplay: i need updated html
+EventListeners<--MineralsDisplay: here.
+
+DOM<--EventListeners: new html
 TransientState->database: i need to change some values
+note over database: values changed
