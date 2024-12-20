@@ -16,9 +16,31 @@ export const setMineral = (minId) => {
 	document.dispatchEvent(new CustomEvent("mineralSelected"));
 	console.log(state);
 };
+const resetState = () => {
+	state.selectedFacility = NaN
+	state.selectedMineral = NaN
+}
 export const getFacility = () => state.selectedFacility;
 
 export const getColony = () => state.selectedColony;
+
+export const getMineral = () => state.selectedMineral;
+
+export const stateClone = () => structuredClone(state);
+
+document.addEventListener("mineralSelected", () => {
+	const facility = getFacility() 
+	const mineral = getMineral() 
+	const colony = getColony() 
+
+	if (!isNaN(colony) && !isNaN(facility) && !isNaN(mineral)) {
+		console.log("No NaNs")
+		purchases.push(state)
+	}
+
+})
+
+
 
 export const purchaseMineral = async () => {
 	/*
@@ -105,7 +127,7 @@ const updateColonyMinerals = async () => {
 			placeObj(method, endpoint, object);
 		} else {
 			method = "PUT";
-			endpoint = obj.id;
+			endpoint = object.id;
 			object.amount++;
 			placeObj(method, endpoint, object);
 		}

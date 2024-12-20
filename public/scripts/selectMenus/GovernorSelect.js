@@ -16,7 +16,7 @@ export const genGovernorSelectMenu = () =>
 	fetchGovernors().then((govs) => {
 		let govhtml = `<p>Choose a Governor</p>
                   <select name="governers">
-                    <option value="default"> Choose a Governor... `;
+                    <option value="NaN"> Choose a Governor... `;
 		for (const gov of govs) {
 			if (gov.status === "active") {
 				govhtml += `

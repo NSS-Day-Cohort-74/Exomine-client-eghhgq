@@ -22,7 +22,7 @@ export const genFacilitiesSelectMenu = async () => {
 	});
 	return `<p>Choose a facility</p>
           <select name="facilities">
-            <option value="default"> Choose a facility...
+            <option value="NaN"> Choose a facility...
             ${facilitiesArray.join("")}
           </select>`;
 };

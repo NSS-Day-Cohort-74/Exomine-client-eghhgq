@@ -16,6 +16,7 @@ export const facilityHandler = async ({target: { options,name } }) => {
 			.querySelector("#space-purchase")
 			.setAttribute("disabled", "disabled")
 		}
+		document.querySelector("#whatToBuy").innerHTML = ""
 		
     setFacility(options[options.selectedIndex].value)
     }

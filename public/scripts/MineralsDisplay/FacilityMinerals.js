@@ -24,14 +24,17 @@ const findFacility = async (facilityId) => {
 export const genFacilityHTML = async (facilityId) => {
 	const facilities = await fetchFacilityMinerals();
 	const filtered = facilities.filter(
-		(facility) => facility.facilityId === facilityId,
-	);
+		(facility) => facility.facilityId === facilityId && facility.amount > 0);
 	console.log(filtered);
 	const radios = filtered
 		.map(
-			(fac) =>
-				`<div id="faMin"><input type="radio" name="facility-minerals" data-name="${fac.mineral.name}" data-id="${fac.mineral.id}"
-			 />${fac.amount} tons of ${fac.mineral.name}</div>`,
+			(fac) => 
+				`<div id="faMin">
+			      <input type="radio"
+				   name="facility-minerals" 
+				   data-name="${fac.mineral.name}" 
+				   data-id="${fac.mineral.id}"
+			 />${fac.amount} tons of ${fac.mineral.name}</div>`
 		)
 		.join("");
 
